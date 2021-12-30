@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <main id="main-container">
+        <button id="generate-new-images">Generate New Images</button>
+        <div className="top-stories-container">
+          <div className="top-story-row topmost-row">
+            <div className="top-story-item main-story"></div>
+            <div className="top-story-item"></div>
+          </div>
+          <div className="top-story-row">
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+          </div>
+          <div className="top-story-row">
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+          </div>
+          <div className="top-story-row">
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+            <div className="top-story-item"></div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
