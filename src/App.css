@@ -3,19 +3,28 @@ html {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  font-family: 'Merriweather', serif;
 }
 
 header {
+  display: flex;
   width: 100%;
-  height: 40px;
+  height: 60px;
   margin-bottom: 3rem;
-  border: 1px solid red;
+  background-color: #ffcc26;
 }
 
-main {
+main, .header-title {
   width: 1200px;
   margin: 0 auto;
-  border: 1px solid blue;
+}
+
+.header-title {
+  align-self: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .top-stories-container {
@@ -30,9 +39,40 @@ main {
   grid-gap: 1.5rem;
 }
 
-.top-story-item {
-  border: 1px solid yellowgreen;
-  height: 200px;
+form {
+  margin-bottom: .8rem;
+}
+
+input {
+  font-size: 1.4rem;
+}
+
+#topic-input {
+  border: 1px solid #808080;
+  border-radius: 1rem;
+  width: 400px;
+  text-align: center;
+}
+
+#topic-submit {
+  background-color: #9acd32;
+  color: #ffffff;
+  width: 120px;
+  border: none;
+  border-radius: 1rem;
+  margin-left: .4rem;
+  font-weight: bold;
+}
+
+#topic-submit:hover {
+  cursor: pointer;
+  background-color: #ffcc26;
+  transition: all .5s;
+}
+
+.top-story-container {
+  border: 1px solid #9acd32;
+  height: 220px;
 }
 
 .topmost-row {
