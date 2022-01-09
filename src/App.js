@@ -55,7 +55,7 @@ function App() {
                 isLoaded ? <NewsStory storyIndex="0" photoSrc={photos[0].src.medium} photoUrl={photos[0].url} descr={photos[0].alt} author={photos[0].photographer} authorUrl={photos[0].photographer_url} authorId={photos[0].photographer_id} /> : <p>Loading</p>
               }
             </div>
-            <div className="top-story-container">
+            <div className="top-story-container secondary-story">
               {
                 isLoaded ? <NewsStory storyIndex="1" photoSrc={photos[1].src.medium} photoUrl={photos[1].url} descr={photos[1].alt} author={photos[1].photographer} authorUrl={photos[1].photographer_url} authorId={photos[1].photographer_id} /> : <p>Loading</p>
               }

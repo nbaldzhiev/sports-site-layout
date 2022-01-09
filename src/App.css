@@ -86,3 +86,51 @@ input {
 .main-story {
   grid-column: span 3;
 }
+
+
+/* Mobile version */
+
+@media (max-width: 768px) {
+  header {
+    height: 40px;
+  }
+
+  main, .header-title {
+    width: 100%;
+  }
+
+  .header-title {
+    font-size: 2rem;
+    padding-left: 1rem;
+  }
+
+  form {
+    padding-left: 1rem;
+  }
+
+  .top-stories-container, .top-story-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-story-row:not(.topmost-row) .top-story-container {
+    height: 200px;
+  }
+
+  input {
+    font-size: 1.1rem;
+  }
+
+  #topic-input {
+    width: 300px;
+  }
+
+  #topic-submit {
+    width: 120px;
+  }
+
+  .topmost-row > .secondary-story {
+    height: 200px;
+  }
+
+}

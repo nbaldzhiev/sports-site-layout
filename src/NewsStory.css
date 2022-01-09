@@ -8,11 +8,19 @@
   height: 100%;
 }
 
-.main-story .story-title {
-  margin: 0;
-  margin-left: 1.5rem;
-  font-size: 2.5rem;
-  font-weight: bold;
+.story-title, .author-url {
+  color: black;
+  text-decoration: none;
+}
+
+.story-title:hover, .author-name:hover {
+  color: #ffcc26;
+  transition: all .4s;
+}
+
+img:hover {
+  filter: brightness(75%) saturate(140%); 
+  transition: all .6s;
 }
 
 img {
@@ -31,7 +39,6 @@ img {
 
 .main-story .story-title {
   margin: 0;
-  margin-left: 1.5rem;
   margin-right: 1rem;
   font-size: 2.5rem;
   font-weight: bold;
@@ -57,9 +64,7 @@ img {
 }
 
 .author-url {
-  text-decoration: none;
   font-style: italic;
-  color: #000000;
 }
 
 .author-url:hover {
@@ -70,7 +75,8 @@ img {
   margin: 0;
   padding: 0;
   font-size: .9rem;
-  color: #9acd32;
+  color: #618d08;
+  text-decoration: none;
 }
 
 .top-story-row:not(.topmost-row) .author-name {
@@ -93,14 +99,92 @@ img {
 }
 
 .comments-amount {
-  margin-left: .2rem;
+  margin-left: .4rem;
   font-size: .9rem;
 }
 
 .elapsed-value {
-  margin-left: .2rem;
+  margin-left: .4rem;
   font-size: .9rem;
   margin-right: .5rem;
   padding-right: .5rem;
   border-right: 1px solid #d3d3d3;
+}
+
+.live-icon {
+  margin-right: .5rem;
+  width: 80px;
+}
+
+.main-story-title-container {
+  margin: 0;
+  margin-left: 1.5rem;
+}
+
+/* Mobile version */
+
+@media (max-width: 768px) {
+  .topmost-row > .main-story > .story-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .story-item {
+    padding: 0 1rem;
+  }
+
+  .story-title {
+    margin-right: 0;
+  }
+
+  .main-story.story-thumbnail {
+    width: 100%;
+    height: 300px;
+  }
+
+  .live-icon {
+    width: 60px;
+  }
+
+  .main-story .story-title {
+    font-size: 1.6rem;
+  }
+
+  .story-description {
+    display: none;
+  }
+
+  .main-story-title-container {
+    margin: 0;
+  }
+
+  .main-story .author-name {
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .top-story-container:not(.main-story) .story-info-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .top-story-container:not(.main-story) .story-title {
+    font-size: 1.1rem;
+  }
+  
+  .top-story-container:not(.main-story) img {
+    height: 200px;
+  }
+
+  .top-story-container:not(.main-story) .thumbnail-container {
+    width: 50%;
+  }
+
+  .top-story-container:not(.main-story) > .story-item {
+    display: flex;
+    flex-direction: row;
+  }
+
 }
