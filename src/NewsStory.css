@@ -172,6 +172,7 @@ img {
 
   .top-story-container:not(.main-story) .story-title {
     font-size: 1.1rem;
+    max-height: 150px;
   }
   
   .top-story-container:not(.main-story) img {
@@ -180,11 +181,18 @@ img {
 
   .top-story-container:not(.main-story) .thumbnail-container {
     width: 50%;
+    margin-right: .8rem;
   }
 
   .top-story-container:not(.main-story) > .story-item {
     display: flex;
     flex-direction: row;
+    border-top: 1px solid #d4d4d4;
+    padding-top: .6rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
 }
