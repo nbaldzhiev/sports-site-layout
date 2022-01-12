@@ -33,7 +33,7 @@ function App() {
   useEffect(() => {
     setIsLoaded(false);
     getPhotos().then((data) => {
-      data.length ? setIsLoaded(true) : setIsLoaded(false);
+      data.length == 14 ? setIsLoaded(true) : setIsLoaded(false);
     })
   }, [submittedTopic])
 
