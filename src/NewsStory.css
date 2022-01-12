@@ -202,4 +202,9 @@ img {
   .comments-amount, .author-name, .elapsed-value {
     font-size: .7rem;
   }
+
+  .top-story-container img.loader {
+    height: 100px;
+  }
+
 }
