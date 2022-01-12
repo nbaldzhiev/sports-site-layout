@@ -1,6 +1,6 @@
 # Sports Site Layout React App
 
-A simple React app, hosted on [GitHub Pages](https://nbaldzhiev.github.io/sports-site-layout/), to practice React, HTML, and CSS The website's sole purpose is to practice FE development. It tries to replicate the layout of the BBC Sport homepage (as of 12th of January 2022) as a way to practice React and layout construction with CSS Grid and Flexbox. The React app is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React app, hosted on [GitHub Pages](https://nbaldzhiev.github.io/sports-site-layout/), to practice React, HTML, and CSS The website's sole purpose is to practice FE development. It tries to replicate the layout of the [BBC Sport homepage](https://www.bbc.com/sport) (as of 12th of January 2022) as a way to practice React and layout construction with CSS Grid and Flexbox. The React app is bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Description
 
