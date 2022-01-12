@@ -14,7 +14,7 @@ header {
   background-color: #ffcc26;
 }
 
-main, .header-title {
+main, .header-title-container {
   width: 1200px;
   margin: 0 auto;
 }
@@ -87,6 +87,11 @@ input {
   grid-column: span 3;
 }
 
+.loader {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
 
 /* Mobile version */
 
@@ -104,8 +109,13 @@ input {
     padding-left: 1rem;
   }
 
+  .loader {
+    width: 100px;
+  }
+
   form {
-    padding-left: 1rem;
+    display: flex;
+    padding: 0 1rem;
   }
 
   .top-stories-container, .top-story-row {
@@ -118,15 +128,15 @@ input {
   }
 
   input {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   #topic-input {
-    width: 300px;
+    width: 70%;
   }
 
   #topic-submit {
-    width: 120px;
+    width: 30%;
   }
 
   .topmost-row > .secondary-story {

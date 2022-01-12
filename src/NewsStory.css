@@ -167,7 +167,6 @@ img {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .top-story-container:not(.main-story) .story-title {
@@ -195,4 +194,12 @@ img {
     margin-right: 1rem;
   }
 
+  .top-story-container:not(.main-story) .story-info-footer {
+    max-width: 170px;
+    overflow-x: hidden;
+  }
+
+  .comments-amount, .author-name, .elapsed-value {
+    font-size: .7rem;
+  }
 }
