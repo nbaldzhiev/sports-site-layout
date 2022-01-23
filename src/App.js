@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import NewsStory from "./NewsStory.js";
 import loader from "./loader.svg";
+import burgerIcon from "./menu.png";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   const [topic, setTopic] = useState(defaultPhotosTopic);
   const [submittedTopic, setSubmittedTopic] = useState(defaultPhotosTopic);
   const [photos, setPhotos] = useState([]);
+  const [isHeaderExpanded, setIsHeaderExpanded] = useState(false);
 
   const authToken = '563492ad6f917000010000014065df06dbb24fc08d9c3df9dcd9e597';
   const baseUrl = 'https://api.pexels.com/v1/';
@@ -37,6 +39,14 @@ function App() {
     })
   }, [submittedTopic])
 
+  useEffect(() => {
+    if (isHeaderExpanded) {
+      document.querySelector('.collapsible-menu').style.display = 'block';
+    } else {
+      document.querySelector('.collapsible-menu').style.display = 'none';
+    }
+  }, [isHeaderExpanded])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,6 +55,18 @@ function App() {
             event.preventDefault();
             setSubmittedTopic(defaultPhotosTopic);
           }}>SPORT</a>
+          <div className="burger-menu-container">
+            <img className="burger-menu-icon" src={burgerIcon} width="24" height="24" onClick={(event) => {
+              event.preventDefault();
+              if (isHeaderExpanded) {
+                setIsHeaderExpanded(false);
+              } else {
+                setIsHeaderExpanded(true);
+              }
+            }}></img>
+          </div>
+        </div>
+        <div className="collapsible-menu">
         </div>
       </header>
       <main id="main-container">
