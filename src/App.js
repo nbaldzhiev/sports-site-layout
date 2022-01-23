@@ -67,6 +67,17 @@ function App() {
           </div>
         </div>
         <div className="collapsible-menu">
+          <div className="collapsible-items">
+            <p className="collapsible-item home-item">Home</p>
+            <p className="collapsible-item">Football</p>
+            <p className="collapsible-item">Cricket</p>
+            <p className="collapsible-item">Formula 1</p>
+            <p className="collapsible-item">Rugby U</p>
+            <p className="collapsible-item">Tennis</p>
+            <p className="collapsible-item">Golf</p>
+            <p className="collapsible-item">Athletics</p>
+            <p className="collapsible-item last-collapsible-item">Cycling</p>
+          </div>
         </div>
       </header>
       <main id="main-container">
