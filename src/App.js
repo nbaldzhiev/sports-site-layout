@@ -66,6 +66,19 @@ function App() {
             }}></img>
           </div>
         </div>
+        <div className="subheader-container">
+          <div className="subheader-items">
+            <p className="subheader-item home-item">Home</p>
+            <p className="subheader-item">Football</p>
+            <p className="subheader-item">Cricket</p>
+            <p className="subheader-item">Formula 1</p>
+            <p className="subheader-item">Rugby U</p>
+            <p className="subheader-item">Tennis</p>
+            <p className="subheader-item">Golf</p>
+            <p className="subheader-item">Athletics</p>
+            <p className="subheader-item last-subheader-item">Cycling</p>
+          </div>
+        </div>
         <div className="collapsible-menu">
           <div className="collapsible-items">
             <p className="collapsible-item home-item">Home</p>

@@ -10,12 +10,16 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60px;
   margin-bottom: 3rem;
   background-color: #ffcc26;
 }
 
-main, .header-title-container {
+.subheader-container {
+  width: 100%;
+  display: none;
+}
+
+main, .header-title-container, .subheader-items {
   width: 1200px;
   margin: 0 auto;
 }
@@ -197,4 +201,46 @@ input {
     height: 200px;
   }
 
+}
+
+@media (min-width: 769px) {
+  .header-title-container {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+  }
+
+  .subheader-container {
+    padding-top: .2rem;
+    padding-bottom: .3rem;
+    display: block;
+    height: 30px;
+    background-color: #ffcc26;
+    border-top: 1px solid #c39f23;
+  }
+
+  .subheader-items {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .subheader-item {
+    padding: 0 .5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .subheader-item:not(.last-subheader-item) {
+    border-right: 1px solid #c39f23;
+  }
+
+  .subheader-item:hover {
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .2s;
+  }
+
+  .collapsible-menu {
+    background-color: #0f0f0f;
+  }
 }
