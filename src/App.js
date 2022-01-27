@@ -80,16 +80,59 @@ function App() {
           </div>
         </div>
         <div className="collapsible-menu">
-          <div className="collapsible-items">
-            <p className="collapsible-item home-item">Home</p>
-            <p className="collapsible-item">Football</p>
-            <p className="collapsible-item">Cricket</p>
-            <p className="collapsible-item">Formula 1</p>
-            <p className="collapsible-item">Rugby U</p>
-            <p className="collapsible-item">Tennis</p>
-            <p className="collapsible-item">Golf</p>
-            <p className="collapsible-item">Athletics</p>
-            <p className="collapsible-item last-collapsible-item">Cycling</p>
+          <div className="all-collapsible-items">
+            <div className="collapsible-items">
+              <p className="collapsible-item home-item on-small-screens">Home</p>
+              <p className="collapsible-item">Football</p>
+              <p className="collapsible-item">Cricket</p>
+              <p className="collapsible-item">Formula 1</p>
+              <p className="collapsible-item">Rugby U</p>
+              <p className="collapsible-item">Tennis</p>
+              <p className="collapsible-item on-small-screens">Golf</p>
+              <p className="collapsible-item on-small-screens">Athletics</p>
+              <p className="collapsible-item last-collapsible-item on-small-screens">Cycling</p>
+            </div>
+            <div className="collapsible-menu-second-column">
+              <p className="collapsible-item">Darts</p>
+              <p className="collapsible-item">Disability Sport</p>
+              <p className="collapsible-item">Gaelic Games</p>
+              <p className="collapsible-item">Get Inspired</p>
+              <p className="collapsible-item">Swimming</p>
+            </div>
+            <div className="collapsible-menu-third-column">
+              <p className="collapsible-item">Gymnastics</p>
+              <p className="collapsible-item">Horse Racing</p>
+              <p className="collapsible-item">Mixed Martial Arts</p>
+              <p className="collapsible-item">Motorsport</p>
+              <p className="collapsible-item">Winter Sports</p>
+            </div>
+            <div className="collapsible-menu-fourth-column">
+              <p className="collapsible-item">American Football</p>
+              <p className="collapsible-item">Boxing</p>
+              <p className="collapsible-item">Basketball</p>
+              <p className="collapsible-item">Table Tennis</p>
+              <p className="collapsible-item">Snooker</p>
+            </div>
+            <div className="collapsible-menu-fifth-column">
+              <p className="collapsible-item">Slalom</p>
+              <p className="collapsible-item">Weightlifting</p>
+              <p className="collapsible-item">Kayak</p>
+              <p className="collapsible-item">Triathlon</p>
+              <p className="collapsible-item">Water Polo</p>
+            </div>
+            <div className="collapsible-menu-sixth-column">
+              <p className="collapsible-item">Full Sports A-Z</p>
+            </div>
+          </div>
+          <div className="collapsible-menu-bottom-row">
+            <div className="collapsible-menu-bottom-row-items">
+              <p className="collapsible-item first-item">England</p>
+              <p className="collapsible-item">Scotland</p>
+              <p className="collapsible-item">Wales</p>
+              <p className="collapsible-item">Northern Ireland</p>
+              <p className="collapsible-item">News Feeds</p>
+              <p className="collapsible-item">Help & FAQs</p>
+            </div>
           </div>
         </div>
       </header>
