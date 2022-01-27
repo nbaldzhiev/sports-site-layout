@@ -125,6 +125,9 @@ function App() {
             </div>
           </div>
           <div className="collapsible-menu-bottom-row">
+            <div className="collapsible-menu-more-from-sport-row">
+              <p className="collapsible-item more-from-sport">More from Sport</p>
+            </div>
             <div className="collapsible-menu-bottom-row-items">
               <p className="collapsible-item first-item">England</p>
               <p className="collapsible-item">Scotland</p>
