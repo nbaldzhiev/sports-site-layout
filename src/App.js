@@ -165,15 +165,15 @@ function App() {
         <div className="collapsible-menu">
           <div className="all-collapsible-items">
             <div className="collapsible-items">
-              <p className="collapsible-item home-item on-small-screens">Home</p>
-              <p className="collapsible-item">Football</p>
-              <p className="collapsible-item">Cricket</p>
-              <p className="collapsible-item">Formula 1</p>
-              <p className="collapsible-item">Rugby U</p>
-              <p className="collapsible-item">Tennis</p>
-              <p className="collapsible-item on-small-screens">Golf</p>
-              <p className="collapsible-item on-small-screens">Athletics</p>
-              <p className="collapsible-item last-collapsible-item on-small-screens">Cycling</p>
+              <Link to="/" className="collapsible-item home-item on-small-screens" onClick={() => setTopic('dogs')}>Home</Link>
+              <Link to="/football" className="collapsible-item" onClick={() => setTopic('football')} >Football</Link>
+              <Link to="/cricket" className="collapsible-item" onClick={() => setTopic('cricket')}>Cricket</Link>
+              <Link to="/formula" className="collapsible-item" onClick={() => setTopic('formula')}>Formula 1</Link>
+              <Link to="/rugby" className="collapsible-item" onClick={() => setTopic('rugby')}>Rugby U</Link>
+              <Link to="/tennis" className="collapsible-item" onClick={() => setTopic('tennis')}>Tennis</Link>
+              <Link to="/golf" className="collapsible-item on-small-screens" onClick={() => setTopic('golf')}>Golf</Link>
+              <Link to="/athletics" className="collapsible-item on-small-screens" onClick={() => setTopic('athletics')}>Athletics</Link>
+              <Link to="/cycling" className="collapsible-item last-collapsible-item on-small-screens" onClick={() => setTopic('cycling')}>Cycling</Link>
             </div>
             <div className="collapsible-menu-second-column">
               <p className="collapsible-item">Darts</p>
@@ -223,6 +223,7 @@ function App() {
         </div>
       </header>
       <main id="main-container">
+
         <Routes>
           <Route path="/" element={storyItems} />
           <Route path="/football" element={storyItems} />
@@ -233,6 +234,7 @@ function App() {
           <Route path="/golf" element={storyItems} />
           <Route path="/athletics" element={storyItems} />
           <Route path="/cycling" element={storyItems} />
+          <Route path="*" element={storyItems} />
         </Routes>
       </main>
     </div>
