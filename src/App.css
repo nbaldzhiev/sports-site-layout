@@ -238,6 +238,8 @@ input {
     padding: 0 .5rem;
     font-size: 1.1rem;
     font-weight: 400;
+    text-decoration: none;
+    color: #0f0f0f;
   }
 
   .subheader-item:not(.last-subheader-item) {

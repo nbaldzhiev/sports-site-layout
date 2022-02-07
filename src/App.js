@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, Routes, Route } from "react-router-dom";
 import './App.css';
 import NewsStory from "./NewsStory.js";
 import loader from "./loader.svg";
@@ -21,7 +22,7 @@ function App() {
 
   async function getPhotos() {
     const response = await fetch(
-      `${baseUrl}${searchEndpoint}?query=${submittedTopic}&per_page=${numberOfNewsStories}`,
+      `${baseUrl}${searchEndpoint}?query=${topic}&per_page=${numberOfNewsStories}`,
       {
         method: 'GET',
         headers: {'Authorization': authToken}
@@ -37,7 +38,7 @@ function App() {
     getPhotos().then((data) => {
       data.length == 14 ? setIsLoaded(true) : setIsLoaded(false);
     })
-  }, [submittedTopic])
+  }, [topic])
 
   useEffect(() => {
     if (isHeaderExpanded) {
@@ -47,109 +48,7 @@ function App() {
     }
   }, [isHeaderExpanded])
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div className="header-title-container">
-          <a className="header-title" href="#" target="_blank" onClick={(event) => {
-            event.preventDefault();
-            setSubmittedTopic(defaultPhotosTopic);
-          }}>SPORT</a>
-          <div className="burger-menu-container">
-            <img className="burger-menu-icon" src={burgerIcon} width="24" height="24" onClick={(event) => {
-              event.preventDefault();
-              if (isHeaderExpanded) {
-                setIsHeaderExpanded(false);
-              } else {
-                setIsHeaderExpanded(true);
-              }
-            }}></img>
-          </div>
-        </div>
-        <div className="subheader-container">
-          <div className="subheader-items">
-            <p className="subheader-item home-item">Home</p>
-            <p className="subheader-item">Football</p>
-            <p className="subheader-item">Cricket</p>
-            <p className="subheader-item">Formula 1</p>
-            <p className="subheader-item">Rugby U</p>
-            <p className="subheader-item">Tennis</p>
-            <p className="subheader-item">Golf</p>
-            <p className="subheader-item">Athletics</p>
-            <p className="subheader-item last-subheader-item">Cycling</p>
-          </div>
-        </div>
-        <div className="collapsible-menu">
-          <div className="all-collapsible-items">
-            <div className="collapsible-items">
-              <p className="collapsible-item home-item on-small-screens">Home</p>
-              <p className="collapsible-item">Football</p>
-              <p className="collapsible-item">Cricket</p>
-              <p className="collapsible-item">Formula 1</p>
-              <p className="collapsible-item">Rugby U</p>
-              <p className="collapsible-item">Tennis</p>
-              <p className="collapsible-item on-small-screens">Golf</p>
-              <p className="collapsible-item on-small-screens">Athletics</p>
-              <p className="collapsible-item last-collapsible-item on-small-screens">Cycling</p>
-            </div>
-            <div className="collapsible-menu-second-column">
-              <p className="collapsible-item">Darts</p>
-              <p className="collapsible-item">Disability Sport</p>
-              <p className="collapsible-item">Gaelic Games</p>
-              <p className="collapsible-item">Get Inspired</p>
-              <p className="collapsible-item">Swimming</p>
-            </div>
-            <div className="collapsible-menu-third-column">
-              <p className="collapsible-item">Gymnastics</p>
-              <p className="collapsible-item">Horse Racing</p>
-              <p className="collapsible-item">Mixed Martial Arts</p>
-              <p className="collapsible-item">Motorsport</p>
-              <p className="collapsible-item">Winter Sports</p>
-            </div>
-            <div className="collapsible-menu-fourth-column">
-              <p className="collapsible-item">American Football</p>
-              <p className="collapsible-item">Boxing</p>
-              <p className="collapsible-item">Basketball</p>
-              <p className="collapsible-item">Table Tennis</p>
-              <p className="collapsible-item">Snooker</p>
-            </div>
-            <div className="collapsible-menu-fifth-column">
-              <p className="collapsible-item">Slalom</p>
-              <p className="collapsible-item">Weightlifting</p>
-              <p className="collapsible-item">Kayak</p>
-              <p className="collapsible-item">Triathlon</p>
-              <p className="collapsible-item">Water Polo</p>
-            </div>
-            <div className="collapsible-menu-sixth-column">
-              <p className="collapsible-item">Full Sports A-Z</p>
-            </div>
-          </div>
-          <div className="collapsible-menu-bottom-row">
-            <div className="collapsible-menu-more-from-sport-row">
-              <p className="collapsible-item more-from-sport">More from Sport</p>
-            </div>
-            <div className="collapsible-menu-bottom-row-items">
-              <p className="collapsible-item first-item">England</p>
-              <p className="collapsible-item">Scotland</p>
-              <p className="collapsible-item">Wales</p>
-              <p className="collapsible-item">Northern Ireland</p>
-              <p className="collapsible-item">News Feeds</p>
-              <p className="collapsible-item">Help & FAQs</p>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main id="main-container">
-        <div className="topic-input-container">
-          <form onSubmit={(event) => {
-            event.preventDefault();
-            setSubmittedTopic(topic);
-          }}>
-            <input type="text" id="topic-input" placeholder={"Enter a topic, such as " + defaultPhotosTopic} size="8" onChange={(event) => setTopic(event.target.value)} value={topic} />
-            <input id="topic-submit" type="submit" value="Submit" />
-          </form>
-        </div>
-        <div className="top-stories-container">
+  const storyItems = <div className="top-stories-container">
           <div className="top-story-row topmost-row">
             <div className="top-story-container main-story">
               {
@@ -230,6 +129,111 @@ function App() {
             </div>
           </div>
         </div>
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <div className="header-title-container">
+          <a className="header-title" href="#" target="_blank" onClick={(event) => {
+            event.preventDefault();
+            setSubmittedTopic(defaultPhotosTopic);
+          }}>SPORT</a>
+          <div className="burger-menu-container">
+            <img className="burger-menu-icon" src={burgerIcon} width="24" height="24" onClick={(event) => {
+              event.preventDefault();
+              if (isHeaderExpanded) {
+                setIsHeaderExpanded(false);
+              } else {
+                setIsHeaderExpanded(true);
+              }
+            }}></img>
+          </div>
+        </div>
+        <div className="subheader-container">
+          <div className="subheader-items">
+            <Link to="/" className="subheader-item home-item" onClick={() => setTopic('dogs')}>Home</Link>
+            <Link to="/football" className="subheader-item" onClick={() => setTopic('football')}>Football</Link>
+            <Link to="/cricket" className="subheader-item" onClick={() => setTopic('cricket')} >Cricket</Link>
+            <Link to="/formula" className="subheader-item" onClick={() => setTopic('formula')}>Formula 1</Link>
+            <Link to="/rugby" className="subheader-item" onClick={() => setTopic('rugby')}>Rugby</Link>
+            <Link to="/tennis" className="subheader-item" onClick={() => setTopic('tennis')}>Tennis</Link>
+            <Link to="/golf" className="subheader-item" onClick={() => setTopic('golf')}>Golf</Link>
+            <Link to="/athletics" className="subheader-item" onClick={() => setTopic('athletics')}>Athletics</Link>
+            <Link to="/cycling" className="subheader-item last-subheader-item" onClick={() => setTopic('cycling')}>Cycling</Link>
+          </div>
+        </div>
+        <div className="collapsible-menu">
+          <div className="all-collapsible-items">
+            <div className="collapsible-items">
+              <p className="collapsible-item home-item on-small-screens">Home</p>
+              <p className="collapsible-item">Football</p>
+              <p className="collapsible-item">Cricket</p>
+              <p className="collapsible-item">Formula 1</p>
+              <p className="collapsible-item">Rugby U</p>
+              <p className="collapsible-item">Tennis</p>
+              <p className="collapsible-item on-small-screens">Golf</p>
+              <p className="collapsible-item on-small-screens">Athletics</p>
+              <p className="collapsible-item last-collapsible-item on-small-screens">Cycling</p>
+            </div>
+            <div className="collapsible-menu-second-column">
+              <p className="collapsible-item">Darts</p>
+              <p className="collapsible-item">Disability Sport</p>
+              <p className="collapsible-item">Gaelic Games</p>
+              <p className="collapsible-item">Get Inspired</p>
+              <p className="collapsible-item">Swimming</p>
+            </div>
+            <div className="collapsible-menu-third-column">
+              <p className="collapsible-item">Gymnastics</p>
+              <p className="collapsible-item">Horse Racing</p>
+              <p className="collapsible-item">Mixed Martial Arts</p>
+              <p className="collapsible-item">Motorsport</p>
+              <p className="collapsible-item">Winter Sports</p>
+            </div>
+            <div className="collapsible-menu-fourth-column">
+              <p className="collapsible-item">American Football</p>
+              <p className="collapsible-item">Boxing</p>
+              <p className="collapsible-item">Basketball</p>
+              <p className="collapsible-item">Table Tennis</p>
+              <p className="collapsible-item">Snooker</p>
+            </div>
+            <div className="collapsible-menu-fifth-column">
+              <p className="collapsible-item">Slalom</p>
+              <p className="collapsible-item">Weightlifting</p>
+              <p className="collapsible-item">Kayak</p>
+              <p className="collapsible-item">Triathlon</p>
+              <p className="collapsible-item">Water Polo</p>
+            </div>
+            <div className="collapsible-menu-sixth-column">
+              <p className="collapsible-item">Full Sports A-Z</p>
+            </div>
+          </div>
+          <div className="collapsible-menu-bottom-row">
+            <div className="collapsible-menu-more-from-sport-row">
+              <p className="collapsible-item more-from-sport">More from Sport</p>
+            </div>
+            <div className="collapsible-menu-bottom-row-items">
+              <p className="collapsible-item first-item">England</p>
+              <p className="collapsible-item">Scotland</p>
+              <p className="collapsible-item">Wales</p>
+              <p className="collapsible-item">Northern Ireland</p>
+              <p className="collapsible-item">News Feeds</p>
+              <p className="collapsible-item">Help & FAQs</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="main-container">
+        <Routes>
+          <Route path="/" element={storyItems} />
+          <Route path="/football" element={storyItems} />
+          <Route path="/cricket" element={storyItems} />
+          <Route path="/formula" element={storyItems} />
+          <Route path="/rugby" element={storyItems} />
+          <Route path="/tennis" element={storyItems} />
+          <Route path="/golf" element={storyItems} />
+          <Route path="/athletics" element={storyItems} />
+          <Route path="/cycling" element={storyItems} />
+        </Routes>
       </main>
     </div>
   );
