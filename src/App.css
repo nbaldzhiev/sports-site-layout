@@ -63,37 +63,6 @@ main, .header-title-container, .subheader-items {
   grid-gap: 1.5rem;
 }
 
-form {
-  margin-bottom: .8rem;
-}
-
-input {
-  font-size: 1.4rem;
-}
-
-#topic-input {
-  border: 1px solid #808080;
-  border-radius: 1rem;
-  width: 400px;
-  text-align: center;
-}
-
-#topic-submit {
-  background-color: #9acd32;
-  color: #ffffff;
-  width: 120px;
-  border: none;
-  border-radius: 1rem;
-  margin-left: .4rem;
-  font-weight: bold;
-}
-
-#topic-submit:hover {
-  cursor: pointer;
-  background-color: #ffcc26;
-  transition: all .5s;
-}
-
 .top-story-container {
   height: 220px;
 }
@@ -162,13 +131,14 @@ input {
     font-size: 1.3rem;
     font-weight: 400;
     border-bottom: 1px solid #7e7d7d;
+    text-decoration: none;
   }
 
   .last-collapsible-item {
     border: none;
   }
 
-  .home-item {
+  .collapsible-item.selected {
     border-left: 5px solid #ffcc26;
   }
 
@@ -231,6 +201,9 @@ input {
 
   .subheader-item.home-item {
     padding-left: 0;
+  }
+
+  .subheader-item.selected {
     font-weight: 700;
   }
 
@@ -305,6 +278,16 @@ input {
   .collapsible-item {
     width: 140px;
     color: #ffffff;
+  }
+
+  .collapsible-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collapsible-items > a {
+    text-decoration: none;
+    margin-top: 1rem;
   }
 
   .collapsible-menu-more-from-sport-row {
