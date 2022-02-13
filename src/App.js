@@ -149,7 +149,7 @@ function App() {
         <div className="header-title-container">
           <Link to="/sports-site-layout/" className="header-title" onClick={() => updateTopic(defaultPhotosTopic)}>SPORT</Link>
           <div className="burger-menu-container">
-            <img className="burger-menu-icon" src={burgerIcon} width="24" height="24" onClick={(event) => {
+            <img className="burger-menu-icon" src={burgerIcon} alt="burger icon" width="24" height="24" onClick={(event) => {
               event.preventDefault();
               if (isHeaderExpanded) {
                 setIsHeaderExpanded(false);

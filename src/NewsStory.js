@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './NewsStory.css';
 import liveGif from "./fcnantes-nantes.gif";
 
