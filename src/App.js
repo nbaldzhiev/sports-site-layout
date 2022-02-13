@@ -147,7 +147,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="header-title-container">
-          <Link to="/sports-site-layout/" className="header-title" onClick={() => updateTopic(defaultPhotosTopic)}>SPORT</Link>
+          <Link to="/" className="header-title" onClick={() => updateTopic(defaultPhotosTopic)}>SPORT</Link>
           <div className="burger-menu-container">
             <img className="burger-menu-icon" src={burgerIcon} alt="burger icon" width="24" height="24" onClick={(event) => {
               event.preventDefault();
@@ -161,29 +161,29 @@ function App() {
         </div>
         <div className="subheader-container">
           <div className="subheader-items">
-            <Link to="/sports-site-layout/" className="subheader-item home-item selected" onClick={(event) => updateTopic(defaultPhotosTopic, event.target)}>Home</Link>
-            <Link to="/sports-site-layout/football" className="subheader-item" onClick={(event) => updateTopic('football', event.target)}>Football</Link>
-            <Link to="/sports-site-layout/cricket" className="subheader-item" onClick={(event) => updateTopic('cricket', event.target)} >Cricket</Link>
-            <Link to="/sports-site-layout/formula" className="subheader-item" onClick={(event) => updateTopic('formula', event.target)}>Formula 1</Link>
-            <Link to="/sports-site-layout/rugby" className="subheader-item" onClick={(event) => updateTopic('rugby', event.target)}>Rugby</Link>
-            <Link to="/sports-site-layout/tennis" className="subheader-item" onClick={(event) => updateTopic('tennis', event.target)}>Tennis</Link>
-            <Link to="/sports-site-layout/golf" className="subheader-item" onClick={(event) => updateTopic('golf', event.target)}>Golf</Link>
-            <Link to="/sports-site-layout/athletics" className="subheader-item" onClick={(event) => updateTopic('athletics', event.target)}>Athletics</Link>
-            <Link to="/sports-site-layout/cycling" className="subheader-item last-subheader-item" onClick={(event) => updateTopic('cycling', event.target)}>Cycling</Link>
+            <Link to="/" className="subheader-item home-item selected" onClick={(event) => updateTopic(defaultPhotosTopic, event.target)}>Home</Link>
+            <Link to="/football" className="subheader-item" onClick={(event) => updateTopic('football', event.target)}>Football</Link>
+            <Link to="/cricket" className="subheader-item" onClick={(event) => updateTopic('cricket', event.target)} >Cricket</Link>
+            <Link to="/formula" className="subheader-item" onClick={(event) => updateTopic('formula', event.target)}>Formula 1</Link>
+            <Link to="/rugby" className="subheader-item" onClick={(event) => updateTopic('rugby', event.target)}>Rugby</Link>
+            <Link to="/tennis" className="subheader-item" onClick={(event) => updateTopic('tennis', event.target)}>Tennis</Link>
+            <Link to="/golf" className="subheader-item" onClick={(event) => updateTopic('golf', event.target)}>Golf</Link>
+            <Link to="/athletics" className="subheader-item" onClick={(event) => updateTopic('athletics', event.target)}>Athletics</Link>
+            <Link to="/cycling" className="subheader-item last-subheader-item" onClick={(event) => updateTopic('cycling', event.target)}>Cycling</Link>
           </div>
         </div>
         <div className="collapsible-menu">
           <div className="all-collapsible-items">
             <div className="collapsible-items">
-              <Link to="/sports-site-layout/" className="collapsible-item home-item on-small-screens selected" onClick={(event) => updateTopic(defaultPhotosTopic, event.target)}>Home</Link>
-              <Link to="/sports-site-layout/football" className="collapsible-item" onClick={(event) => updateTopic('football', event.target)} >Football</Link>
-              <Link to="/sports-site-layout/cricket" className="collapsible-item" onClick={(event) => updateTopic('cricket', event.target)}>Cricket</Link>
-              <Link to="/sports-site-layout/formula" className="collapsible-item" onClick={(event) => updateTopic('formula', event.target)}>Formula 1</Link>
-              <Link to="/sports-site-layout/rugby" className="collapsible-item" onClick={(event) => updateTopic('rugby', event.target)}>Rugby U</Link>
-              <Link to="/sports-site-layout/tennis" className="collapsible-item" onClick={(event) => updateTopic('tennis', event.target)}>Tennis</Link>
-              <Link to="/sports-site-layout/golf" className="collapsible-item on-small-screens" onClick={(event) => updateTopic('golf', event.target)}>Golf</Link>
-              <Link to="/sports-site-layout/athletics" className="collapsible-item on-small-screens" onClick={(event) => updateTopic('athletics', event.target)}>Athletics</Link>
-              <Link to="/sports-site-layout/cycling" className="collapsible-item last-collapsible-item on-small-screens" onClick={(event) => updateTopic('cycling', event.target)}>Cycling</Link>
+              <Link to="/" className="collapsible-item home-item on-small-screens selected" onClick={(event) => updateTopic(defaultPhotosTopic, event.target)}>Home</Link>
+              <Link to="/football" className="collapsible-item" onClick={(event) => updateTopic('football', event.target)} >Football</Link>
+              <Link to="/cricket" className="collapsible-item" onClick={(event) => updateTopic('cricket', event.target)}>Cricket</Link>
+              <Link to="/formula" className="collapsible-item" onClick={(event) => updateTopic('formula', event.target)}>Formula 1</Link>
+              <Link to="/rugby" className="collapsible-item" onClick={(event) => updateTopic('rugby', event.target)}>Rugby U</Link>
+              <Link to="/tennis" className="collapsible-item" onClick={(event) => updateTopic('tennis', event.target)}>Tennis</Link>
+              <Link to="/golf" className="collapsible-item on-small-screens" onClick={(event) => updateTopic('golf', event.target)}>Golf</Link>
+              <Link to="/athletics" className="collapsible-item on-small-screens" onClick={(event) => updateTopic('athletics', event.target)}>Athletics</Link>
+              <Link to="/cycling" className="collapsible-item last-collapsible-item on-small-screens" onClick={(event) => updateTopic('cycling', event.target)}>Cycling</Link>
             </div>
             <div className="collapsible-menu-second-column">
               <p className="collapsible-item">Darts</p>
@@ -235,15 +235,15 @@ function App() {
       <main id="main-container">
 
         <Routes>
-          <Route path="/sports-site-layout/" element={storyItems} />
-          <Route path="/sports-site-layout/football" element={storyItems} />
-          <Route path="/sports-site-layout/cricket" element={storyItems} />
-          <Route path="/sports-site-layout/formula" element={storyItems} />
-          <Route path="/sports-site-layout/rugby" element={storyItems} />
-          <Route path="/sports-site-layout/tennis" element={storyItems} />
-          <Route path="/sports-site-layout/golf" element={storyItems} />
-          <Route path="/sports-site-layout/athletics" element={storyItems} />
-          <Route path="/sports-site-layout/cycling" element={storyItems} />
+          <Route path="/" element={storyItems} />
+          <Route path="/football" element={storyItems} />
+          <Route path="/cricket" element={storyItems} />
+          <Route path="/formula" element={storyItems} />
+          <Route path="/rugby" element={storyItems} />
+          <Route path="/tennis" element={storyItems} />
+          <Route path="/golf" element={storyItems} />
+          <Route path="/athletics" element={storyItems} />
+          <Route path="/cycling" element={storyItems} />
           <Route path="*" element={storyItems} />
         </Routes>
       </main>
