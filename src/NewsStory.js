@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useMatch } from "react-router-dom";
 import './NewsStory.css';
 import liveGif from "./fcnantes-nantes.gif";
 
@@ -27,7 +28,7 @@ function NewsStory(props) {
   if (props.storyIndex === "0") {
     titleElement = <div className="main-story-title-container">
       <img className="live-icon" src={liveGif} alt="animated gif of live icon"></img>
-      <a className="story-title" href={photoUrl} target="_blank" rel="noreferrer">{photoDescr}</a>
+      <Link to={props.storyIndex} className="story-title">{photoDescr}</Link>
     </div>
   } else {
     titleElement = <a className="story-title" href={photoUrl} target="_blank" rel="noreferrer">{photoDescr}</a>
