@@ -153,17 +153,33 @@ function App() {
       <main id="main-container">
 
         <Routes>
-          <Route path="/" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/football" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
-            <Route path=":articleId" element={<SelectedNewsStory />} />
+          <Route path="/" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
           </Route>
-          <Route path="/cricket" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/formula" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/rugby" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/tennis" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/golf" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/athletics" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
-          <Route path="/cycling" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
+          <Route path="/football" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/cricket" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/formula" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/rugby" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/tennis" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/golf" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/athletics" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
+          <Route path="/cycling" element={<NewsStories isLoaded={isLoaded} photos={photos} />}>
+            <Route path=":articleId" element={<SelectedNewsStory photos={photos} />} />
+          </Route>
           <Route path="*" element={<NewsStories isLoaded={isLoaded} photos={photos} />} />
         </Routes>
 

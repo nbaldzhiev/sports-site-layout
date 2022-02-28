@@ -31,13 +31,13 @@ function NewsStory(props) {
       <Link to={props.storyIndex} className="story-title">{photoDescr}</Link>
     </div>
   } else {
-    titleElement = <a className="story-title" href={photoUrl} target="_blank" rel="noreferrer">{photoDescr}</a>
+    titleElement = <Link to={props.storyIndex} className="story-title">{photoDescr}</Link>
   }
 
   return (
     <div className="story-item">
       <div className="thumbnail-container">
-        <a className="photo-url" href={photoUrl} target="_blank" rel="noreferrer">{imgElement}</a>
+        <Link to={props.storyIndex} className="photo-url">{imgElement}</Link>
       </div>
       <div className="story-info-container">
         {titleElement}
