@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Routes, Route, Outlet } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import NewsStories from "./NewsStories.js";
 import SelectedNewsStory from "./SelectedNewsStory.js";
 import './App.css';

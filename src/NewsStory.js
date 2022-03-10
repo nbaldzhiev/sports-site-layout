@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Link, useMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './NewsStory.css';
 import liveGif from "./fcnantes-nantes.gif";
 
 function NewsStory(props) {
 
   const [photoSrc] = useState(props.photoSrc);
-  const [photoUrl] = useState(props.photoUrl);
   const [photoDescr] = useState(props.descr);
   const [photoAuthor] = useState(props.author);
   const [photoAuthorUrl] = useState(props.authorUrl);
