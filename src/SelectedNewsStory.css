@@ -43,6 +43,24 @@
     margin-bottom: 1.6rem;
 }
 
+
 .news-story-thumbnail {
+    display: block;
     object-fit: cover;
+    margin-bottom: 0;
+}
+
+.thumbnail-info {
+    margin-top: 0;
+    background-color: #e8e9e8;
+    padding: 0.8rem;
+    font-size: .8rem;
+}
+
+.main-paragraph {
+    font-weight: bold;
+}
+
+.story-text-paragraph {
+    font-size: 1.1rem;
 }
