@@ -14,10 +14,12 @@ function NewsStories(props) {
             element.classList.remove('displayed');
             element.classList.add('hidden');
         }
+        document.querySelector('.top-stories-container').style.display = "block";
     } else {
         for (const element of storyRowElements) {
             element.classList.remove('hidden');
             element.classList.add('displayed');
+            document.querySelector('.top-stories-container').style.display = "grid";
         }
     }
 

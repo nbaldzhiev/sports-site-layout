@@ -30,7 +30,7 @@
     border-right: 1px solid #484848;
 }
 
-.author-name {
+.selected-story-elapsed-time-container .author-name {
     color: #618d08;
     padding-left: .5rem;
     padding-right: .5rem;
