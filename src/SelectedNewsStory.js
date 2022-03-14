@@ -24,6 +24,7 @@ function SelectedNewsStory(props) {
 
     useEffect(() => {
         getStoryText();
+        document.querySelector('.top-stories-container').style.display = "block";
     }, [])
 
     return (
