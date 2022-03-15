@@ -64,3 +64,35 @@
 .story-text-paragraph {
     font-size: 1.1rem;
 }
+
+@media (max-width: 768px) {
+    .selected-story-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .selected-story-title {
+        font-size: 2rem;
+    }
+
+    .selected-story-author, .selected-story-source, .author-name {
+        font-size: .9rem;
+    }
+
+    .news-story-thumbnail {
+        width: 100%;
+    }
+
+    .elapsed-time { 
+        font-size: .8rem;
+    }
+
+    .story-text-paragraph {
+        font-size: .9rem;
+    }
+
+    .thumbnail-info {
+        font-size: .7rem;
+    }
+
+}

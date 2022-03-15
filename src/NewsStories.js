@@ -11,13 +11,11 @@ function NewsStories(props) {
     const storyRowElements = document.querySelectorAll('.top-story-row');
     if (parseInt(pathname.slice(-1)) >= 0) {
         for (const element of storyRowElements) {
-            element.classList.remove('displayed');
-            element.classList.add('hidden');
+            element.style.display = "none";
         }
     } else {
         for (const element of storyRowElements) {
-            element.classList.remove('hidden');
-            element.classList.add('displayed');
+            element.style.display = "";
         }
     }
 
