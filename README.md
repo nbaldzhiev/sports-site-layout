@@ -10,3 +10,5 @@ The app allows:
 * using the form to input a specific topic of photos, such as "mountains", which loads the layout with photographs of that topic. The topic defaults to "dogs".
 
 The website is somewhat responsive with a single breakpoint at max-width 768px to allow for better rendering on smartphones.
+
+> **_NOTE:_**  This project is not free of bugs and this is normal for this type of a project used for learning purposes. Fixing these bugs is part of my path towards learning news things.
